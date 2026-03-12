@@ -68,7 +68,7 @@ class ProductListView(APIView):
     permission_classes = [IsAuthenticated]
     """
     api: api/products/
-    View used for listing all the products that belong to the user
+    View used for listing all the products that belong to the owner
     """
     def get(self, request):
         products = ProductService.get_all_active(request.user)
